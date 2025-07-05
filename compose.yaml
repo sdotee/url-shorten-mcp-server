@@ -1,0 +1,12 @@
+services:
+  shorten-url-mcp-server:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    environment:
+      BIND_PORT: "3000"
+      BIND_HOST: "0.0.0.0"
+      URL_SHORTENER_API_KEY: ""
+      URL_SHORTENER_API_BASE: "https://s.ee"
+      URL_SHORTENER_DEFAULT_DOMAIN: "s.ee"
